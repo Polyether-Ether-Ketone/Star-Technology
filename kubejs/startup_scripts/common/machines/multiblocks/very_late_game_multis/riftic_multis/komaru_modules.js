@@ -1,6 +1,6 @@
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 
-    event.create(`basic_test_module`, 'multiblock')
+    event.create(`basic_type_module`, 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         // .machine((holder) => new $KomaruModule(holder, basic)) //add a machine type for komaru modules
         .recipeTypes('dummy')
@@ -16,13 +16,13 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('C', Predicates.blocks('kubejs:draco_assembly_grating'))
             .where('D', Predicates.blocks('kubejs:draco_resilient_fusion_glass'))
             .where('E', Predicates.blocks('start_core:advanced_fusion_coil'))
-            .where('F', Predicates.abilities(PartAbility.INPUT_ENERGY))
+            .where('F', $StarTKomaruPredicates.BASIC_STORAGE_KEY)
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
         .workableCasingModel('kubejs:block/casings/end_multis/draco_ware_casing', 
             'gtceu:block/multiblock/hpca');
 
-    event.create(`advanced_test_module`, 'multiblock')
+    event.create(`advanced_type_module`, 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         // .machine((holder) => new $KomaruModule(holder, advanced)) //add a machine type for komaru modules
         .recipeTypes('dummy')
@@ -39,7 +39,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .where('C', Predicates.blocks('kubejs:draco_assembly_grating'))
             .where('D', Predicates.blocks('kubejs:draco_resilient_fusion_glass'))
             .where('E', Predicates.blocks('start_core:advanced_fusion_coil'))
-            .where('F', Predicates.abilities(PartAbility.INPUT_ENERGY))
+            .where('F', $StarTKomaruPredicates.ADVANCED_STORAGE_KEY)
             .where('@', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
         .workableCasingModel('kubejs:block/casings/end_multis/draco_ware_casing', 

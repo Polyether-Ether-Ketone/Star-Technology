@@ -42,6 +42,10 @@
             //VCR Machine
     const $StarTVacuumPumpPredicates = Java.loadClass("com.startechnology.start_core.machine.vacuum_pump.StarTVacuumPumpPredicates");
 
+    const $StarTKomaruFrameMachine = Java.loadClass("com.startechnology.start_core.machine.komaru.StarTKomaruFrameMachine");
+    const $StarTKomaruPredicates = Java.loadClass("com.startechnology.start_core.machine.komaru.StarTKomaruPredicates");
+    const $StarTModularConnectionHatches = Java.loadClass("com.startechnology.start_core.machine.modular.StarTModularConnectionHatches");
+
 //GTCEU Loader
 
     //Multiblock Relative Direction Loader
